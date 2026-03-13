@@ -1,4 +1,4 @@
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Download } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export function Hero() {
@@ -7,6 +7,15 @@ export function Hero() {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const downloadCV = () => {
+    const link = document.createElement('a');
+    link.href = '/CV-Ana-vallejo-Completo-IT.pdf';
+    link.download = 'CV-Ana-Vallejo.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -72,7 +81,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="pt-8"
+            className="pt-8 flex flex-col sm:flex-row gap-4 justify-center"
           >
             <motion.button
               onClick={scrollToProjects}
@@ -81,7 +90,7 @@ export function Hero() {
                 boxShadow: '0 10px 40px -10px rgba(200, 111, 70, 0.4)'
               }}
               whileTap={{ scale: 0.95 }}
-              className="group inline-flex items-center gap-2 px-8 py-4 bg-[#c0576f] text-white rounded-lg hover:bg-[#7e2f56] transition-all"
+              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#c0576f] text-white rounded-lg hover:bg-[#7e2f56] transition-all"
             >
               Ver Proyectos
               <motion.div
@@ -93,6 +102,28 @@ export function Hero() {
                 }}
               >
                 <ArrowRight size={20} />
+              </motion.div>
+            </motion.button>
+
+            <motion.button
+              onClick={downloadCV}
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: '0 10px 40px -10px rgba(126, 47, 86, 0.4)'
+              }}
+              whileTap={{ scale: 0.95 }}
+              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#7e2f56] text-white rounded-lg hover:bg-[#c0576f] transition-all"
+            >
+              Descargar CV
+              <motion.div
+                animate={{ y: [0, 4, 0] }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  ease: 'easeInOut'
+                }}
+              >
+                <Download size={20} />
               </motion.div>
             </motion.button>
           </motion.div>
