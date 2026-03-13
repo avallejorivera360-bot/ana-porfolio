@@ -15,7 +15,7 @@ export function Projects() {
           className="mb-16"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl tracking-tight mb-4 text-[#470d3b] dark:text-[#E48679] text-center">
-            Proyectos Seleccionados
+            Proyectos
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-center">
             Una colección de trabajos recientes que muestran proyectos de diseño web y desarrollo para clientes en diversas industrias.
