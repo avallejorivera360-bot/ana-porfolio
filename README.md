@@ -244,22 +244,6 @@ Editar en `tailwind.config.ts` y archivos CSS:
 - ✅ CSS optimizado: 16.56KB (gzipped)
 - ✅ Code splitting: CaseStudy lazy-loaded (1.59KB gzipped)
 
-### Mejoras Implementadas
-- 🖼️ **Lazy loading** - Imágenes cargan solo cuando son visibles
-- 📦 **Code splitting** - CaseStudy carga bajo demanda con React.lazy()
-- 🎬 **requestAnimationFrame** - Navegación suave sin setTimeout arbitrario
-- 💾 **useCallback** - Funciones memoizadas en Hero y Navigation
-- 🌓 **Tailwind classes** - Sin CSS-in-JS, solo clases
-- ♿ **Accesibilidad** - ARIA labels en navegación
-
-### Resultados
-- -60% Bundle size (antes: 1.3MB)
-- -115 dependencias no usadas
-- -86% CSS size
-- +40% imagen load time
-
----
-
 ## 🤝 Contribuciones
 
 Este es un proyecto personal, es mi primera vez desarrollando un proyecto completo con React/tailwind por lo que se aceptan sugerencias y mejoras.
