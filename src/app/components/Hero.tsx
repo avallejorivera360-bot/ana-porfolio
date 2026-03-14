@@ -21,7 +21,7 @@ export function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 lg:px-8 pt-40 relative">
+    <section id="hero" className="min-h-screen flex items-center justify-center px-6 lg:px-8 pt-40 relative">
       <div className="max-w-4xl mx-auto text-center">
         <div className="space-y-6">
           {/* Hero Image Circular */}

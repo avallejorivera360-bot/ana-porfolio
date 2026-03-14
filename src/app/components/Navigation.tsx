@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from './LanguageSwitcher';
@@ -24,6 +24,25 @@ export function Navigation() {
     setIsOpen(false);
   };
 
+  // Handle hash-based navigation on page load
+  useEffect(() => {
+    const handleHashNavigation = () => {
+      const hash = window.location.hash.slice(1);
+      if (hash) {
+        setTimeout(() => {
+          const element = document.getElementById(hash);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      }
+    };
+
+    handleHashNavigation();
+    window.addEventListener('hashchange', handleHashNavigation);
+    return () => window.removeEventListener('hashchange', handleHashNavigation);
+  }, []);
+
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -33,14 +52,17 @@ export function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-24">
-          <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+          <button 
+            onClick={() => scrollToSection('hero')}
+            className="flex items-center gap-3 hover:opacity-80 transition-opacity cursor-pointer"
+          >
             <img 
               src="/logo-ana.webp" 
               alt="Ana Vallejo" 
               className="w-16 h-16 "
             />
             {/* <span className="text-sm font-normal tracking-tight hover:text-[#c0576f] dark:hover:text-[#febd84] transition-colors">Ana Vallejo Rivera</span> */}
-          </Link>
+          </button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
