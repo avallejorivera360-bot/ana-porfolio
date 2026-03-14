@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router';
+import { useNavigate, useLocation } from 'react-router';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useState, useEffect } from 'react';
@@ -8,19 +8,13 @@ import { LanguageSwitcher } from './LanguageSwitcher';
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
   const location = useLocation();
   const { isDark, toggleTheme } = useTheme();
   const { t } = useTranslation();
 
   const scrollToSection = (sectionId: string) => {
-    if (location.pathname !== '/') {
-      window.location.href = `/#${sectionId}`;
-    } else {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
+    navigate(`/#${sectionId}`);
     setIsOpen(false);
   };
 
