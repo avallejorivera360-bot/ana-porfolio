@@ -147,6 +147,25 @@
       "development": "Built in WordPress with custom themes and gallery plugins. I used WooCommerce for service catalog structure. Implemented responsive galleries showcasing restoration projects. Created custom contact forms and fields for workshop registration. Integrated Google Maps for workshop location. Optimized speed and image loading. Added social media integration (Instagram and Facebook) to showcase live work. Implemented mobile-first design for accessibility.",
       "result": "The site launched successfully presenting over 50 restoration projects. The visual gallery has increased potential client confidence. Workshop inquiries increased significantly. The site is fully responsive and loads fast even with an extensive image gallery. Clients report ease in contacting and learning about services. The site serves as a portfolio that validates the quality and professionalism of Los Belgas Atelier.",
       "technologies": ["WordPress", "WooCommerce", "Responsive Gallery", "Google Maps", "Custom Forms", "Social Integration"]
+    },
+    "perfumeriaaro": {
+      "title": "Perfumería Aro+ Online Store",
+      "description": "A luxury e-commerce store for a premium perfume shop with a catalog of 500+ fragrances, personalized recommendations, and fast shipping across Spain.",
+      "overview": "A premium e-commerce website for Perfumería Aro+, a high-quality fragrance store with over 16 years of experience. The site presents a complete catalog of 500+ unique fragrances, categories by gender (men/women), and an elegant and sophisticated shopping experience. The project combines luxurious visual design with robust e-commerce functionality that has generated 10,000+ satisfied customers.",
+      "problem": "Perfumería Aro+ needed an elegant website that: 1) Showcased their extensive catalog of premium fragrances in a visually impactful way, 2) Allowed customers to explore fragrances by category and preferences, 3) Provided detailed product information with compelling descriptions, 4) Facilitated online purchases with fast shipping (24-72h), 5) Projected professionalism and trust in a competitive industry.",
+      "goals": [
+        "Design a visually luxurious and sophisticated interface that reflects the premium quality of fragrances",
+        "Implement a robust product catalog capable of managing 500+ fragrances",
+        "Create intuitive navigation with filters by gender, type, and characteristics",
+        "Optimize for mobile since most customers shop from mobile devices",
+        "Integrate shipping and logistics system to guarantee 24-72h deliveries",
+        "Implement a secure payment system with multiple options",
+        "Build trust with testimonials, guarantees, and clear return policies"
+      ],
+      "design": "The design focused on conveying luxury and sophistication. I created an elegant visual hierarchy that highlights product photography (fragrances and bottles). I used a refined, neutral color palette with golden accents to convey premium quality. Each product has meticulous presentation with high-resolution images and evocative descriptions. I implemented prominent testimonials sections (with 1,500+ ratings) to build credibility. The mobile-first design ensures it looks beautiful on small devices.",
+      "development": "Built on WordPress with WooCommerce as the main e-commerce engine. Implemented a robust catalog system capable of managing 500+ products with complex attributes (gender, type, aromatic notes). Created advanced AJAX filters for easy navigation. Integrated high-quality product photography with zoomable galleries. Secure payment systems with multiple payment options processing. Integration with shipping providers for automatic calculations. WhatsApp Business for customer service. Implemented automatic discounts (20% on first purchase) and promotions. Optimized speed and cache for fast load times.",
+      "result": "The store launched successfully and has generated over 10,000 satisfied customers with over 1,500 positive ratings. The catalog of 500+ fragrances is fully optimized and easy to navigate. Online sales grew significantly with the new site. Customers report excellent shopping experience, trust in fast deliveries (24-72h), and appreciate the 30-day return policy. The site has positioned Perfumería Aro+ as a premium fragrance destination online with shipping throughout Spain.",
+      "technologies": ["WordPress", "WooCommerce", "AJAX Filters", "Secure Payment", "WhatsApp Business", "Speed Optimization"]
     }
   },
   "footer": {
