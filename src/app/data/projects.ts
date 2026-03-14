@@ -47,24 +47,27 @@ export const projects: Project[] = [
   {
     id: "merceria",
     title: "Rebranding y Sitio Web de Mercería",
-    description: "Un sitio web de membresía para un estudio de fitness con reserva de clases, perfiles de entrenadores y portal de miembros.",
+    description: "Un sitio web moderno para una tienda física de mercería con catálogo de productos para costura, manualidades y diseño, con sistema de filtrado e información de ubicación.",
     tags: ["Html","CSS","JavaScript", "Diseño UI", "Desarrollo Personalizado", "Diseño Responsivo"],
     image: "/images/merceria/hero-merceria.webp",
-    overview: "Una plataforma digital completa para FitLife Studio, que permite a los miembros reservar clases, ver horarios de entrenadores y acceder a contenido de entrenamiento exclusivo. El proyecto combinó diseño personalizado con funcionalidad potente.",
-    problem: "El estudio de fitness estaba gestionando reservas manualmente por teléfono y correo electrónico, lo que llevá a doble reservas y frustración del cliente. Necesitaban un sistema automatizado que los miembros pudieran usar 24/7." ,
+    overview: "Un portal web profesional y atractivo para una tienda física de mercería especializada en artículos para costura, manualidades, bordado y diseño textil. El sitio presenta un catálogo digital completo de productos organizados por categorías, sistema de búsqueda avanzado, galerías de fotos detalladas e información sobre ubicación y horarios. El proyecto combinó rebranding visual completo con funcionalidad web que conecta a los clientes en línea con la tienda física de manera efectiva.",
+    problem: "La mercería necesitaba modernizar su presencia digital que: 1) Mostrara su amplio catálogo de productos de forma visual y organizada, 2) Permitiera a clientes buscar productos por tipo y capacidad de filtrado, 3) Proporcionara información clara de ubicación y horarios, 4) Proyectar una imagen moderna y profesional, 5) Ser completamente responsivo para clientes móviles que busquen información antes de visitar.",
     problemImages: [
       "/images/merceria/quienes-somos-old.webp",
       "/images/merceria/old-inicio.webp"
     ],
     goals: [
-      "Crear un sistema intuitivo de reserva de clases",
-      "Crear perfiles de miembros con historial personal de entrenamientos",
-      "Diseñar páginas de perfil de entrenadores",
-      "Implementar un área de contenido exclusivo para miembros"
+      "Crear un nuevo diseño visual que refleje modernidad y profesionalismo",
+      "Implementar un catálogo digital bien organizado por categorías",
+      "Diseñar un sistema de filtrado intuitivo para facilitar búsqueda de productos",
+      "Crear una experiencia de usuario clara y fácil de navegar",
+      "Mostrar información clara de ubicación, horarios y contacto de la tienda física",
+      "Proporcionar múltiples formas de contacto directo",
+      "Asegurar diseño completamente responsivo para móviles"
     ],
-    designProcess: "Realicé entrevistas con miembros del gimnasio para entender sus necesidades. Creé flujos de usuario para el proceso de reserva. Diseñé una interfaz limpia y energética con tipografía audaz e imágenes motivacionales. Usé un esquema de color vibrante que refleja la marca activa del estudio.",
-    development: "Desarrollado usando WordPress con plugins personalizados para funcionalidad de reserva. Creé tipos de publicación personalizados para clases, entrenadores y miembros. Implementé autenticación de usuario y control de acceso basado en roles. Construyé un calendario de reserva personalizado usando JavaScript. Integré con procesamiento de pagos para suscripciones de membresía.",
-    result: "La plataforma simplificó significativamente las operaciones, reduciendo el trabajo administrativo en un 70%. La satisfacción de los miembros aumentó con acceso 24/7 a reservas. El estudio reportó un aumento del 40% en la asistencia a clases debido a reservas más fáciles.",
+    designProcess: "El diseño comenzó con análisis de competidores y benchmarking de tiendas de mercería modernas. Creé wireframes detallados enfocados en facilidad de exploración de productos. Diseñé una interfaz limpia con categorías visibles, búsqueda prominente y filtros accesibles. Usé fotografía de productos de alta calidad para inspirar a los usuarios. La paleta de colores es moderna y profesional reflejando la naturaleza creativa de los productos. Implementé secciones con información de la tienda, ubicación en mapa e información de horarios.",
+    development: "Construido con HTML5, CSS3 y JavaScript vanilla para máxima compatibilidad y rendimiento. Implementé un sistema de catálogo dinámico que carga productos desde JSON. Creé filtros AJAX que actualizan productos sin recargar la página. Sistema de galería de productos responsivo con zoom para ver detalles. Integración de Google Maps para mostrar ubicación. Formularios de contacto con validación. Sistema de búsqueda con autocompletado. Secciones dinámicas con información de horarios y ubicación. Integración con redes sociales. Optimización de velocidad y SEO.",
+    result: "El sitio se lanzó exitosamente presentando el catálogo digital completo de la mercería. La nueva identidad visual modernizó la marca significativamente. Los usuarios reportan facilidad para encontrar productos gracias al sistema de filtrado, incluso antes de visitar la tienda. El sitio es completamente responsive y funciona perfectamente en móviles. Las consultas de contacto aumentaron al poder los clientes preguntar sobre productos específicos. El mapa de ubicación ha mejorado la capacidad de los clientes para encontrar la tienda física. El proyecto demuestra habilidad en desarrollo frontend con JavaScript vanilla, diseño responsivo e integración con servicios de ubicación.",
     screenshots: [
       "/images/merceria/inicio.webp",
       "/images/merceria/inicio-1.webp",
