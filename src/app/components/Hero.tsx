@@ -1,7 +1,9 @@
 import { ArrowRight, Download } from 'lucide-react';
 import { motion } from 'motion/react';
+import { useTranslation } from 'react-i18next';
 
 export function Hero() {
+  const { t } = useTranslation();
   const scrollToProjects = () => {
     const element = document.getElementById('projects');
     if (element) {
@@ -47,7 +49,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="inline-block px-4 py-2 bg-gray-50 dark:bg-gray-900 rounded-full text-sm text-gray-600 dark:text-gray-400 mb-4"
           >
-            Disponible para trabajos freelance
+            {t('hero.available')}
           </motion.div>
           
           <motion.h1
@@ -56,16 +58,16 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-5xl md:text-7xl lg:text-8xl tracking-tight text-[#470d3b] dark:text-white"
           >
-            Ana Vallejo Rivera
+            {t('hero.title')}
           </motion.h1>
           
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-2xl md:text-3xl lg:text-4xl bg-gradient-to-r from-[#c0576f] via-[#e48679] to-[#7e2f56] bg-clip-text text-transparent tracking-tight"
+            className="text-2xl md:text-3xl lg:text-4xl bg-gradient-to-r from-[#f06d8c] via-[#e48679] to-[#6b2749] bg-clip-text text-transparent tracking-tight"
           >
-            Diseñadora & Desarrolladora Web
+            {t('hero.subtitle')}
           </motion.h2>
           
           <motion.p
@@ -74,7 +76,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed"
           >
-            Construyo sitios web modernos y experiencias digitales que son hermosas, funcionales y ayudan a los negocios a crecer en línea.
+            {t('hero.description')}
           </motion.p>
           
           <motion.div
@@ -83,7 +85,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.8 }}
             className="pt-8 flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <motion.button
+            {/* <motion.button
               onClick={scrollToProjects}
               whileHover={{ 
                 scale: 1.05,
@@ -103,7 +105,7 @@ export function Hero() {
               >
                 <ArrowRight size={20} />
               </motion.div>
-            </motion.button>
+            </motion.button> */}
 
             <motion.button
               onClick={downloadCV}
@@ -114,7 +116,7 @@ export function Hero() {
               whileTap={{ scale: 0.95 }}
               className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#7e2f56] text-white rounded-lg hover:bg-[#c0576f] transition-all"
             >
-              Descargar CV
+              {t('hero.downloadCV')}
               <motion.div
                 animate={{ y: [0, 4, 0] }}
                 transition={{

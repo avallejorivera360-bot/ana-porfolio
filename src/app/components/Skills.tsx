@@ -1,5 +1,6 @@
 import { Code, Palette, Server } from 'lucide-react';
 import { motion } from 'motion/react';
+import { useTranslation } from 'react-i18next';
 import { useEffect, useRef, useState } from 'react';
 
 const skillsData = [
@@ -19,9 +20,9 @@ const skillsData = [
   // Diseño & Herramientas
   { name: 'Figma', level: 60, category: 'design' },
   { name: 'UI Design', level: 78, category: 'design' },
-  { name: 'Git', level: 65, category: 'design' },
-  { name: 'Elementor', level: 62, category: 'design' },
-  { name: 'WooCommerce', level: 80, category: 'design' },
+  { name: 'GitHub', level: 65, category: 'tools' },
+  { name: 'Elementor', level: 62, category: 'tools' },
+  { name: 'WooCommerce', level: 80, category: 'tools' },
 ];
 
 interface CircularProgressProps {
@@ -120,25 +121,29 @@ function CircularProgress({ percentage, label, delay = 0 }: CircularProgressProp
 }
 
 export function Skills() {
+  const { t } = useTranslation();
   const frontendSkills = skillsData.filter(s => s.category === 'frontend');
   const backendSkills = skillsData.filter(s => s.category === 'backend');
   const designSkills = skillsData.filter(s => s.category === 'design');
 
   const categories = [
     {
-      title: 'Desarrollo Frontend',
+      id: 'frontend',
+      title: t('skills.frontend'),
       icon: Code,
       skills: frontendSkills,
       color: '#c0576f'
     },
     {
-      title: 'Backend',
+      id: 'backend',
+      title: t('skills.backend'),
       icon: Server,
       skills: backendSkills,
       color: '#7e2f56'
     },
     {
-      title: 'Diseño & Herramientas',
+      id: 'tools',
+      title: t('skills.tools'),
       icon: Palette,
       skills: designSkills,
       color: '#e48679'
@@ -156,10 +161,10 @@ export function Skills() {
           className="mb-16 text-center"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl tracking-tight mb-4 text-[#470d3b] dark:text-[#e48679]">
-            Skills & Experiencia
+            {t('skills.section')}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Habilidades en diseño web y desarrollo frontend que me permiten participar en diferentes fases de un proyecto, desde la estructura y el diseño de la interfaz hasta su desarrollo.
+            {t('skills.description')}
           </p>
         </motion.div>
 
@@ -169,7 +174,7 @@ export function Skills() {
             const Icon = category.icon;
             return (
               <motion.div
-                key={category.title}
+                key={category.id}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -199,7 +204,7 @@ export function Skills() {
                         delay: categoryIndex * 0.2 + index * 0.1
                       }}
                       whileHover={{ scale: 1.05 }}
-                      className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300"
+                      className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-sm hover:shadow-xl  hover:bg-white dark:hover:bg-gray-700 dark:hover:shadow-2xl transition-all duration-300"
                     >
                       <CircularProgress
                         percentage={skill.level}
@@ -223,7 +228,7 @@ export function Skills() {
           className="mt-20 text-center p-8 bg-gradient-to-r from-[#c0576f]/5 via-[#e48679]/5 to-[#470d3b]/5 rounded-2xl border border-[#c0576f]/10"
         >
           <p className="text-gray-600 dark:text-[#c0576f] leading-relaxed max-w-3xl mx-auto">
-            Siempre aprendiendo y ampliando mis habilidades. Actualmente estoy profundizando en patrones avanzados de React, buenas prácticas de accesibilidad y técnicas modernas de CSS para crear experiencias digitales cada vez mejores
+            {t('skills.learning')}
           </p>
         </motion.div>
       </div>

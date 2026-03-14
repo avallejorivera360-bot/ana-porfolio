@@ -1,7 +1,9 @@
 import { motion } from 'motion/react';
 import { Heart } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export function Footer() {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -15,11 +17,11 @@ export function Footer() {
           className="flex flex-col md:flex-row items-center justify-between gap-4"
         >
           <div className="text-gray-600 dark:text-gray-400 text-sm">
-            © {currentYear} Ana Vallejo Rivera. Todos los derechos reservados.
+            © {currentYear} Ana Vallejo Rivera. {t('footer.allRightsReserved')}
           </div>
 
           <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
-            Diseñado y desarrollado con
+            {t('footer.designedBuilt')}
             <motion.div
               animate={{
                 scale: [1, 1.2, 1],
@@ -30,9 +32,9 @@ export function Footer() {
                 ease: 'easeInOut'
               }}
             >
-              <Heart size={16} className="text-[#c0576f] fill-[#c0576f]" />
-              Figma | Tailwind | React
+              {/* <Heart size={16} className="text-[#c0576f] fill-[#c0576f]" /> */}
             </motion.div>
+            Figma | Tailwind | React
           </div>
         </motion.div>
       </div>

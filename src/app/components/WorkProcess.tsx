@@ -1,35 +1,37 @@
 import { Search, Layout, Palette, Code2, Rocket } from 'lucide-react';
 import { motion } from 'motion/react';
-
-const processSteps = [
-  {
-    icon: Search,
-    title: 'Investigación',
-    description: 'Comprendiendo tus objetivos, audiencia objetivo y requisitos del proyecto'
-  },
-  {
-    icon: Layout,
-    title: 'Wireframes',
-    description: 'Creación de la estructura y la base de un sitio web antes de su diseño y desarrollo'
-  },
-  {
-    icon: Palette,
-    title: 'Diseño UI',
-    description: 'Diseñando interfaces atractivas y coherentes con la marca utilizando Figma'
-  },
-  {
-    icon: Code2,
-    title: 'Desarrollo',
-    description: 'Construyendo sitios web responsivos y funcionales con código limpio'
-  },
-  {
-    icon: Rocket,
-    title: 'Lanzamiento',
-    description: 'Probando, optimizando e implementando tu sitio web en vivo'
-  }
-];
+import { useTranslation } from 'react-i18next';
 
 export function WorkProcess() {
+  const { t } = useTranslation();
+  
+  const processSteps = [
+    {
+      icon: Search,
+      titleKey: 'workProcess.research',
+      descriptionKey: 'workProcess.researchDesc'
+    },
+    {
+      icon: Layout,
+      titleKey: 'workProcess.wireframes',
+      descriptionKey: 'workProcess.wireframesDesc'
+    },
+    {
+      icon: Palette,
+      titleKey: 'workProcess.design',
+      descriptionKey: 'workProcess.designDesc'
+    },
+    {
+      icon: Code2,
+      titleKey: 'workProcess.development',
+      descriptionKey: 'workProcess.developmentDesc'
+    },
+    {
+      icon: Rocket,
+      titleKey: 'workProcess.launch',
+      descriptionKey: 'workProcess.launchDesc'
+    }
+  ];
   return (
     <section className="py-32 px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto">
@@ -41,10 +43,10 @@ export function WorkProcess() {
           className="mb-16 text-center"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl tracking-tight mb-4 text-[#470d3b] dark:text-[#e48679]">
-            Proceso de Trabajo
+            {t('workProcess.section')}
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Un proceso probado para crear proyectos web exitosos desde el concepto hasta el lanzamiento.
+            {t('workProcess.description')}
           </p>
         </motion.div>
 
@@ -59,7 +61,7 @@ export function WorkProcess() {
               const Icon = step.icon;
               return (
                 <motion.div
-                  key={step.title}
+                  key={step.titleKey}
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -77,7 +79,7 @@ export function WorkProcess() {
 
                   <motion.div
                     transition={{ duration: 0.3 }}
-                    className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300"
+                    className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-sm hover:shadow-xl  hover:bg-white dark:hover:bg-gray-700 dark:hover:shadow-2xl transition-all duration-300"
                   >
                     <div className="flex md:flex-col items-start md:items-center gap-4 md:gap-6">
                       <motion.div
@@ -90,10 +92,10 @@ export function WorkProcess() {
 
                       <div className="md:text-center">
                         <h3 className="text-xl mb-2 tracking-tight text-[#e48679]">
-                          {step.title}
+                          {t(step.titleKey)}
                         </h3>
                         <p className="text-sm text-[#e48679] leading-relaxed">
-                          {step.description}
+                          {t(step.descriptionKey)}
                         </p>
                       </div>
                     </div>
