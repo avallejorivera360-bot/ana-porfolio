@@ -166,6 +166,25 @@
       "development": "Built on WordPress with WooCommerce as the main e-commerce engine. Implemented a robust catalog system capable of managing 500+ products with complex attributes (gender, type, aromatic notes). Created advanced AJAX filters for easy navigation. Integrated high-quality product photography with zoomable galleries. Secure payment systems with multiple payment options processing. Integration with shipping providers for automatic calculations. WhatsApp Business for customer service. Implemented automatic discounts (20% on first purchase) and promotions. Optimized speed and cache for fast load times.",
       "result": "The store launched successfully and has generated over 10,000 satisfied customers with over 1,500 positive ratings. The catalog of 500+ fragrances is fully optimized and easy to navigate. Online sales grew significantly with the new site. Customers report excellent shopping experience, trust in fast deliveries (24-72h), and appreciate the 30-day return policy. The site has positioned Perfumería Aro+ as a premium fragrance destination online with shipping throughout Spain.",
       "technologies": ["WordPress", "WooCommerce", "AJAX Filters", "Secure Payment", "WhatsApp Business", "Speed Optimization"]
+    },
+    "merceria": {
+      "title": "Rebranding and Mercería Website",
+      "description": "A modern website for a physical craft supply store with product catalog for sewing, crafts and design, with filtering system and location information.",
+      "overview": "A professional and attractive web portal for a physical craft supply store specializing in sewing, crafts, embroidery and textile design products. The site presents a complete digital product catalog organized by categories, advanced search system, detailed photo galleries and information about location and hours. The project combined complete visual rebranding with web functionality that effectively connects online customers with the physical store.",
+      "problem": "The craft store needed to modernize its digital presence to: 1) Display its wide product catalog in a visual and organized way, 2) Allow customers to search for products by type with filtering capability, 3) Provide clear information about location and hours, 4) Project a modern and professional image, 5) Be completely responsive for mobile customers looking for information before visiting.",
+      "goals": [
+        "Create a new visual design that reflects modernity and professionalism",
+        "Implement a well-organized digital product catalog by categories",
+        "Design an intuitive filtering system to facilitate product search",
+        "Create a clear and easy to navigate user experience",
+        "Show clear information about the physical store's location, hours and contact",
+        "Provide multiple ways to contact directly",
+        "Ensure completely responsive design for mobile devices"
+      ],
+      "design": "The design began with competitor analysis and benchmarking of modern craft stores. I created detailed wireframes focused on ease of product exploration. I designed a clean interface with visible categories, prominent search and accessible filters. I used high-quality product photography to inspire users. The color palette is modern and professional reflecting the creative nature of the products. I implemented sections with store information, map location and hours information.",
+      "development": "Built with HTML5, CSS3 and vanilla JavaScript for maximum compatibility and performance. I implemented a dynamic catalog system that loads products from JSON. Created AJAX filters that update products without page reload. Responsive product gallery system with zoom to see details. Google Maps integration to show location. Contact forms with validation. Search system with autocomplete. Dynamic sections with hours and location information. Social media integration. Speed and SEO optimization.",
+      "result": "The site launched successfully showcasing the complete digital catalog of the craft store. The new visual identity modernized the brand significantly. Users report ease in finding products thanks to the filtering system, even before visiting the store. The site is completely responsive and works perfectly on mobile devices. Contact inquiries increased as customers were able to ask about specific products. The location map improved customers' ability to find the physical store. The project demonstrates skills in frontend development with vanilla JavaScript, responsive design and integration with location services.",
+      "technologies": ["HTML5", "CSS3", "Vanilla JavaScript", "JSON", "AJAX", "Google Maps", "Responsive Design"]
     }
   },
   "footer": {
