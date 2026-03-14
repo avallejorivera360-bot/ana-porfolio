@@ -4,9 +4,8 @@ import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
 
-// Inicializar EmailJS con tu Public Key
-// Obtén tu Public Key en: https://dashboard.emailjs.com/admin/account
-emailjs.init('YOUR_PUBLIC_KEY_HERE');
+// Inicializar EmailJS 
+emailjs.init('ZnIiHhd-bcyttvd9S');
 
 export function Contact() {
   const { t } = useTranslation();
@@ -26,13 +25,13 @@ export function Contact() {
 
     try {
       await emailjs.send(
-        'YOUR_SERVICE_ID_HERE',      // Service ID de EmailJS
-        'YOUR_TEMPLATE_ID_HERE',      // Template ID de EmailJS
+        'service_idpj4y7',      // Service ID de EmailJS
+        'template_prfwcbm',      // Plantilla ID de EmailJS
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
-          to_email: 'avallejorivera360@gmail.com' // Tu correo
+          to_email: 'avallejorivera360@gmail.com'
         }
       );
 
