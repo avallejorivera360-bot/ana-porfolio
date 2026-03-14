@@ -1,9 +1,11 @@
 import { Link } from 'react-router';
 import { ArrowUpRight, ExternalLink } from 'lucide-react';
 import { motion } from 'motion/react';
+import { useTranslation } from 'react-i18next';
 import { projects } from '../data/projects';
 
 export function Projects() {
+  const { t } = useTranslation();
   return (
     <section id="projects" className="py-32 px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto">
@@ -15,10 +17,10 @@ export function Projects() {
           className="mb-16"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl tracking-tight mb-4 text-[#470d3b] dark:text-[#E48679] text-center">
-            Proyectos
+            {t('projects.section')}
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-center">
-            Una colección de trabajos recientes que muestran proyectos de diseño web y desarrollo para clientes en diversas industrias.
+            {t('projects.description')}
           </p>
         </motion.div>
 

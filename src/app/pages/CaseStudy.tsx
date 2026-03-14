@@ -16,11 +16,11 @@ export function CaseStudy() {
       {/* Back Button */}
       <div className="max-w-5xl mx-auto px-6 lg:px-8 py-8">
         <Link 
-          to="/"
+          to="/#projects"
           className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-[#c0576f] dark:hover:text-[#febd84] transition-colors"
         >
           <ArrowLeft size={20} />
-          Back to projects
+          Volver a Proyectos
         </Link>
       </div>
 
@@ -72,9 +72,25 @@ export function CaseStudy() {
           <h2 className="text-3xl tracking-tight mb-6 dark:text-white">
             The Problem
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+          <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
             {project.problem}
           </p>
+          {project.problemImages && project.problemImages.length > 0 && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {project.problemImages.map((image, index) => (
+                <div 
+                  key={index}
+                  className="aspect-[4/3] rounded-lg overflow-hidden bg-white dark:bg-gray-700"
+                >
+                  <img 
+                    src={image} 
+                    alt={`Problem illustration ${index + 1}`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+          )}
         </section>
 
         {/* Goals */}
@@ -117,7 +133,64 @@ export function CaseStudy() {
         </section>
 
         {/* Screenshots */}
-        {project.screenshots.length > 0 && (
+        {(project.galleryWithVideo && project.galleryWithVideo.length > 0) ? (
+          <section className="mb-16">
+            <h2 className="text-3xl tracking-tight mb-8 dark:text-white">
+              Screenshots
+            </h2>
+            <div className="grid gap-8">
+              {project.galleryWithVideo.map((gallery, index) => (
+                <div 
+                  key={index}
+                  className="rounded-2xl overflow-hidden bg-gray-100 dark:bg-gray-800 shadow-lg space-y-4"
+                >
+                  <div className="aspect-[16/10]">
+                    <video 
+                      src={gallery.video}
+                      controls
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="aspect-[16/10]">
+                    <img 
+                      src={gallery.image} 
+                      alt={`${project.title} screenshot ${index + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        ) : (project.screenshotsWithVideo && project.screenshotsWithVideo.length > 0) ? (
+          <section className="mb-16">
+            <h2 className="text-3xl tracking-tight mb-8 dark:text-white">
+              Screenshots
+            </h2>
+            <div className="grid gap-8">
+              {project.screenshotsWithVideo.map((media, index) => (
+                <div 
+                  key={index}
+                  className="aspect-[16/10] rounded-2xl overflow-hidden bg-gray-100 dark:bg-gray-800 shadow-lg"
+                >
+                  {media.type === 'video' ? (
+                    <video 
+                      src={media.src}
+                      controls
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <img 
+                      src={media.src} 
+                      alt={`${project.title} screenshot ${index + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
+        ) : project.screenshots.length > 0 && (
           <section className="mb-16">
             <h2 className="text-3xl tracking-tight mb-8 dark:text-white">
               Screenshots
@@ -153,9 +226,9 @@ export function CaseStudy() {
         <section className="text-center pt-8 border-t border-gray-200">
           <Link 
             to="/#projects"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
+            className="inline-flex items-center gap-2 px-8 py-4w-full px-8 py-4 bg-[#c0576f] dark:bg-[#febd84] text-white dark:text-[#470d3b] rounded-lg hover:bg-[#7e2f56] dark:hover:bg-[#c0576f] transition-colors disabled:bg-green-500 dark:disabled:bg-green-600 disabled:cursor-not-allowed justify-center"
           >
-            View More Projects
+            Ver más proyectos
             <ExternalLink size={20} />
           </Link>
         </section>

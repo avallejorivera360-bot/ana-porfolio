@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "projects": "Proyectos",
+    "skills": "Skills",
+    "about": "Acerca de",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "available": "Disponible para trabajos freelance",
+    "title": "Ana Vallejo Rivera",
+    "subtitle": "Diseñadora & Desarrolladora Web",
+    "description": "Construyo sitios web modernos y experiencias digitales que son atractivas, funcionales y ayudan a los negocios a crecer.",
+    "viewProjects": "Ver Proyectos",
+    "downloadCV": "Descargar CV"
+  },
+  "projects": {
+    "section": "Proyectos",
+    "description": "Una colección de trabajos recientes que muestran proyectos de diseño web y desarrollo para clientes en diversas industrias.",
+    "viewProject": "Ver Proyecto"
+  },
+  "skills": {
+    "section": "Skills & Experiencia",
+    "description": "Habilidades en diseño web y desarrollo frontend que me permiten participar en diferentes fases de un proyecto, desde la estructura y el diseño de la interfaz hasta su desarrollo.",
+    "frontend": "Desarrollo Frontend",
+    "backend": "Backend",
+    "tools": "Diseño & Herramientas",
+    "learning": "Siempre aprendiendo y ampliando mis habilidades. Actualmente estoy profundizando en patrones avanzados de React, buenas prácticas de accesibilidad y técnicas modernas de CSS para crear experiencias digitales cada vez mejores"
+  },
+  "workProcess": {
+    "section": "Proceso de Trabajo",
+    "description": "Un proceso probado para crear proyectos web exitosos desde el concepto hasta el lanzamiento.",
+    "research": "Investigación",
+    "researchDesc": "Comprendiendo tus objetivos, audiencia objetivo y requisitos del proyecto",
+    "wireframes": "Wireframes",
+    "wireframesDesc": "Creación de la estructura y la base de un sitio web antes de su diseño y desarrollo",
+    "design": "Diseño UI",
+    "designDesc": "Diseñando interfaces atractivas y coherentes con la marca utilizando Figma",
+    "development": "Desarrollo",
+    "developmentDesc": "Construyendo sitios web responsivos y funcionales con código limpio",
+    "launch": "Lanzamiento",
+    "launchDesc": "Probando, optimizando e implementando tu sitio web en vivo"
+  },
+  "about": {
+    "section": "Acerca de Mí",
+    "contributions": "Lo que Aporto a los Proyectos",
+    "bio": "Soy una diseñadora y desarrolladora web autodidacta con formación en administración de sistemas informáticos en red. Mi interés por el desarrollo web comenzó por curiosidad sobre cómo funcionan los sitios web y, con el tiempo, se convirtió en una motivación real por aprender a diseñar y construir productos digitales.",
+    "technologies": "Durante este proceso he estado estudiando tecnologías como HTML, CSS y JavaScript, y sigo ampliando mis conocimientos en desarrollo web, especialmente en herramientas y entornos relacionados con WordPress y comercio electrónico. Actualmente estoy cursando de forma online el grado superior de Desarrollo de Aplicaciones Web (DAW), lo que me permite seguir reforzando mi formación técnica mientras continúo aprendiendo de manera práctica.",
+    "interests": "Me interesa tanto la parte técnica de construir una web como el diseño de interfaces claras, funcionales y fáciles de usar. Disfruto especialmente del proceso de transformar una idea en un sitio web real y funcional. Para mí, un buen sitio web no se trata solo de estética, sino de crear algo útil, bien estructurado y que ofrezca una buena experiencia al usuario.",
+    "approach": "Al combinar diseño y desarrollo, intento aportar una visión práctica a los proyectos. Entender cómo se diseña una interfaz y cómo se construye técnicamente me ayuda a crear soluciones más coherentes y realistas.",
+    "learning": "Actualmente sigo aprendiendo y desarrollando proyectos que me permitan mejorar mis habilidades y ganar experiencia real en el desarrollo de sitios web.",
+    "usability": "Enfoque en la usabilidad",
+    "usabilityDesc": "Diseñar interfaces claras y fáciles de usar, prestando atención a la estructura del contenido y a que la navegación sea sencilla para el usuario.",
+    "code": "Código claro y organizado",
+    "codeDesc": "Escribir código limpio y comprensible, siguiendo buenas prácticas básicas para que los proyectos sean fáciles de mantener y mejorar.",
+    "problem": "Mentalidad práctica para resolver problemas",
+    "problemDesc": "Cuando surge un problema técnico, me gusta analizarlo, investigar diferentes soluciones y probar hasta encontrar la que mejor funciona en cada caso.",
+    "continuous": "Aprendizaje continuo",
+    "continuousDesc": "Sigo ampliando mis conocimientos en desarrollo web y diseño, explorando nuevas herramientas, tecnologías y formas de mejorar mis proyectos."
+  },
+  "contact": {
+    "section": "¡Trabajemos Juntos!",
+    "description": "¿Tienes un proyecto en mente? Me encantaría escucharlo y discutir cómo puedo ayudarte a hacer realidad tu visión.",
+    "contactInfo": "Contacto",
+    "openOpportunities": "Abierto a Oportunidades",
+    "openToWork": "Actualmente estoy disponible para proyectos freelance y abierta a posiciones como diseñadora/desarrolladora junior. Ya sea que necesites un sitio web completo, una página de aterrizaje o desarrollo personalizado de WordPress, me encantaría discutir tus necesidades.",
+    "sendMessage": "Enviar un Mensaje",
+    "nameLabel": "Nombre",
+    "namePlaceholder": "Tu nombre",
+    "emailLabel": "Correo Electrónico",
+    "emailPlaceholder": "tu.correo@ejemplo.com",
+    "messageLabel": "Mensaje",
+    "messagePlaceholder": "Cuéntame sobre tu proyecto...",
+    "sendButton": "Enviar Mensaje",
+    "successMessage": "¡Mensaje Enviado!",
+    "email": "Correo Electrónico",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "allRightsReserved": "Todos los derechos reservados.",
+    "designedBuilt": "Diseñado y construido por Ana Vallejo"
+  }
+}

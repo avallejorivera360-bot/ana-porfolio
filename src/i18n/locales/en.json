@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "projects": "Projects",
+    "skills": "Skills",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "available": "Available for freelance work",
+    "title": "Ana Vallejo Rivera",
+    "subtitle": "Designer & Web Developer",
+    "description": "I build modern websites and digital experiences that are beautiful, functional, and help businesses grow.",
+    "viewProjects": "View Projects",
+    "downloadCV": "Download CV"
+  },
+  "projects": {
+    "section": "Projects",
+    "description": "A collection of recent work showcasing web design and development projects for clients in various industries.",
+    "viewProject": "View Project"
+  },
+  "skills": {
+    "section": "Skills & Experience",
+    "description": "Web design and frontend development skills that allow me to participate in different phases of a project, from structure and interface design to development.",
+    "frontend": "Frontend Development",
+    "backend": "Backend",
+    "tools": "Design & Tools",
+    "learning": "Always learning and expanding my skills. Currently diving deeper into advanced React patterns, accessibility best practices, and modern CSS techniques to create better digital experiences"
+  },
+  "workProcess": {
+    "section": "Work Process",
+    "description": "A proven process for creating successful web projects from concept to launch.",
+    "research": "Research",
+    "researchDesc": "Understanding your goals, target audience, and project requirements",
+    "wireframes": "Wireframes",
+    "wireframesDesc": "Creating the structure and foundation of a website before design and development",
+    "design": "UI Design",
+    "designDesc": "Designing attractive and brand-consistent interfaces using Figma",
+    "development": "Development",
+    "developmentDesc": "Building responsive and functional websites with clean code",
+    "launch": "Launch",
+    "launchDesc": "Testing, optimizing, and deploying your website live"
+  },
+  "about": {
+    "section": "About Me",
+    "contributions": "What I Bring to Projects",
+    "bio": "I'm a self-taught web designer and developer with training in IT systems administration. My interest in web development started out of curiosity about how websites work and, over time, became a genuine motivation to learn to design and build digital products.",
+    "technologies": "During this process I've been studying technologies like HTML, CSS, and JavaScript, and I continue to expand my knowledge in web development, especially in tools and environments related to WordPress and e-commerce. I'm currently taking an online course for a higher degree in Web Application Development (DAW), which allows me to continue strengthening my technical training while continuing to learn in a practical way.",
+    "interests": "I'm interested in both the technical side of building a website and designing clear, functional, and easy-to-use interfaces. I especially enjoy the process of transforming an idea into a real and functional website. For me, a good website is not just about aesthetics, but about creating something useful, well-structured, and that offers a good user experience.",
+    "approach": "By combining design and development, I try to bring a practical vision to projects. Understanding how an interface is designed and how it's technically built helps me create more coherent and realistic solutions.",
+    "learning": "I'm currently continuing to learn and develop projects that allow me to improve my skills and gain real experience in web development.",
+    "usability": "Focus on Usability",
+    "usabilityDesc": "Designing clear and easy-to-use interfaces, paying attention to content structure and ensuring simple navigation for users.",
+    "code": "Clear and Organized Code",
+    "codeDesc": "Writing clean and understandable code, following basic best practices to make projects easy to maintain and improve.",
+    "problem": "Practical Problem-Solving Mindset",
+    "problemDesc": "When a technical problem arises, I like to analyze it, research different solutions, and test until I find the one that works best in each case.",
+    "continuous": "Continuous Learning",
+    "continuousDesc": "I continue to expand my knowledge in web development and design, exploring new tools, technologies, and ways to improve my projects."
+  },
+  "contact": {
+    "section": "Let's Work Together!",
+    "description": "Do you have a project in mind? I'd love to hear about it and discuss how I can help you bring your vision to life.",
+    "contactInfo": "Contact",
+    "openOpportunities": "Open to Opportunities",
+    "openToWork": "I'm currently available for freelance projects and open to positions as a junior designer/developer. Whether you need a complete website, a landing page, or custom WordPress development, I'd love to discuss your needs.",
+    "sendMessage": "Send a Message",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "your.email@example.com",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Tell me about your project...",
+    "sendButton": "Send Message",
+    "successMessage": "Message Sent!",
+    "email": "Email",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "allRightsReserved": "All rights reserved.",
+    "designedBuilt": "Designed and built by Ana Vallejo"
+  }
+}
