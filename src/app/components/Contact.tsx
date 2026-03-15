@@ -152,7 +152,7 @@ export function Contact() {
                 </motion.div>
                 <div>
                   <div className="text-sm text-gray-500 dark:text-gray-400">{t('contact.email')}</div>
-                  <div className="group-hover:text-[#c0576f] transition-colors dark:text-gray-200">
+                  <div className="group-hover:text-[#c0576f] transition-colors dark:text-gray-200 dark:group-hover:text-[#c0576f]">
                     avallejorivera360@gmail.com
                   </div>
                 </div>
@@ -177,7 +177,7 @@ export function Contact() {
                 </motion.div>
                 <div>
                   <div className="text-sm text-gray-500 dark:text-gray-400">{t('contact.linkedin')}</div>
-                  <div className="group-hover:text-[#c0576f] transition-colors dark:text-gray-200">
+                  <div className="group-hover:text-[#c0576f] transition-colors dark:text-gray-200 dark:group-hover:text-[#c0576f]">
                     linkedin.com/in/anavallejorivera-developer
                   </div>
                 </div>
