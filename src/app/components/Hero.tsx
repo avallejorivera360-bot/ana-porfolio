@@ -6,7 +6,7 @@ import { useCallback } from 'react';
 export function Hero() {
   const { t } = useTranslation();
 
-  // ✅ useCallback para evitar re-renders innecesarios
+  // useCallback para evitar re-renders innecesarios
   const scrollToProjects = useCallback(() => {
     const element = document.getElementById('projects');
     if (element) {
@@ -14,12 +14,11 @@ export function Hero() {
     }
   }, []);
 
-  // ✅ Simplificado: sin manipulación DOM innecesaria
   const downloadCV = useCallback(() => {
     const link = document.createElement('a');
     link.href = '/CV-Ana-vallejo-Completo-IT.pdf';
     link.download = 'CV-Ana-Vallejo.pdf';
-    link.click(); // No necesita appendChild en navegadores modernos
+    link.click(); 
   }, []);
 
   return (
@@ -38,7 +37,7 @@ export function Hero() {
                 src="/images/me-cartoon.webp"
                 alt="Ana Vallejo - Desarrolladora Web"
                 className="w-full h-full rounded-full object-cover shadow-2xl"
-                loading="lazy" // ✅ Lazy loading
+                loading="lazy" // Lazy loading
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
               />
@@ -112,12 +111,9 @@ export function Hero() {
 
             <motion.button
               onClick={downloadCV}
-              whileHover={{ 
-                scale: 1.05,
-                boxShadow: '0 10px 40px -10px rgba(126, 47, 86, 0.4)'
-              }}
-              whileTap={{ scale: 0.95 }}
-              className="group inline-flex items-center justify-center gap-2 w-1/2 mx-auto px-8 py-4 bg-[#7e2f56] text-white rounded-lg hover:bg-[#c0576f] transition-all"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="w-1/2 mx-auto px-8 py-4 bg-[#c0576f] dark:bg-[#febd84] text-white dark:text-[#470d3b] rounded-lg hover:bg-[#7e2f56] dark:hover:bg-[#c0576f] transition-colors inline-flex items-center justify-center gap-2"
             >
               {t('hero.downloadCV')}
               <motion.div
