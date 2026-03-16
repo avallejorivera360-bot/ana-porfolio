@@ -61,9 +61,9 @@ export function Navigation() {
             aria-label="Navigate to home"
           >
             <img 
-              src="/logo-ana-vallejo.webp" 
+              src="/fav-icon.webp" 
               alt="Ana Vallejo" 
-              className="w-26 h-20"
+              className="w-22 h-20"
             />
             {/* <span className="text-sm font-normal tracking-tight hover:text-[#c0576f] dark:hover:text-[#febd84] transition-colors">Ana Vallejo Rivera</span> */}
           </button>
@@ -73,7 +73,7 @@ export function Navigation() {
             <motion.button
               whileHover={{ y: -2 }}
               onClick={() => scrollToSection('projects')}
-              className="font-normal whitespace-nowrap hover:text-[#c0576f] dark:hover:text-[#febd84] transition-colors"
+              className="font-normal whitespace-nowrap hover:text-[#c0576f] dark:hover:text-[#febd84] transition-colors cursor-pointer"
               aria-label="Projects section"
             >
               {t('nav.projects')}
@@ -81,7 +81,7 @@ export function Navigation() {
             <motion.button
               whileHover={{ y: -2 }}
               onClick={() => scrollToSection('skills')}
-              className="font-normal whitespace-nowrap hover:text-[#c0576f] dark:hover:text-[#febd84] transition-colors"
+              className="font-normal whitespace-nowrap hover:text-[#c0576f] dark:hover:text-[#febd84] transition-colors cursor-pointer"
               aria-label="Skills section"
             >
               {t('nav.skills')}
@@ -89,7 +89,7 @@ export function Navigation() {
             <motion.button
               whileHover={{ y: -2 }}
               onClick={() => scrollToSection('about')}
-              className="font-normal whitespace-nowrap hover:text-[#c0576f] dark:hover:text-[#febd84] transition-colors"
+              className="font-normal whitespace-nowrap hover:text-[#c0576f] dark:hover:text-[#febd84] transition-colors cursor-pointer"
               aria-label="About section"
             >
               {t('nav.about')}
@@ -98,7 +98,7 @@ export function Navigation() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => scrollToSection('contact')}
-              className="px-6 py-2.5 bg-[#c0576f] dark:bg-[#e48679] text-white dark:text-[#470d3b] rounded-lg hover:bg-[#7e2f56] dark:hover:bg-[#c0576f] transition-colors"
+              className="px-6 py-2.5 bg-[#c0576f] dark:bg-[#e48679] text-white dark:text-[#470d3b] rounded-lg hover:bg-[#7e2f56] dark:hover:bg-[#c0576f] transition-colors cursor-pointer"
               aria-label="Contact section"
             >
               {t('nav.contact')}
@@ -111,7 +111,7 @@ export function Navigation() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               onClick={toggleTheme}
-              className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+              className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors cursor-pointer"
               aria-label="Toggle theme"
             >
               {isDark ? <Sun size={20} /> : <Moon size={20} />}
@@ -124,14 +124,14 @@ export function Navigation() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               onClick={toggleTheme}
-              className="p-2"
+              className="p-2 cursor-pointer"
               aria-label="Toggle theme"
             >
               {isDark ? <Sun size={20} /> : <Moon size={20} />}
             </motion.button>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2"
+              className="p-2 cursor-pointer"
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -152,28 +152,28 @@ export function Navigation() {
               <div className="flex flex-col gap-4">
                 <button 
                   onClick={() => scrollToSection('projects')} 
-                  className="text-left py-2 font-normal whitespace-nowrap hover:text-[#c0576f] dark:hover:text-[#e48679] transition-colors dark:text-gray-300"
+                  className="text-left py-2 font-normal whitespace-nowrap hover:text-[#c0576f] dark:hover:text-[#e48679] transition-colors dark:text-gray-300 cursor-pointer"
                   aria-label="Projects section"
                 >
                   {t('nav.projects')}
                 </button>
                 <button 
                   onClick={() => scrollToSection('skills')} 
-                  className="text-left py-2 font-normal whitespace-nowrap hover:text-[#c0576f] dark:hover:text-[#e48679] transition-colors dark:text-gray-300"
+                  className="text-left py-2 font-normal whitespace-nowrap hover:text-[#c0576f] dark:hover:text-[#e48679] transition-colors dark:text-gray-300 cursor-pointer"
                   aria-label="Skills section"
                 >
                   {t('nav.skills')}
                 </button>
                 <button 
                   onClick={() => scrollToSection('about')} 
-                  className="text-left py-2 font-normal whitespace-nowrap hover:text-[#c0576f] dark:hover:text-[#e48679] transition-colors dark:text-gray-300"
+                  className="text-left py-2 font-normal whitespace-nowrap hover:text-[#c0576f] dark:hover:text-[#e48679] transition-colors dark:text-gray-300 cursor-pointer"
                   aria-label="About section"
                 >
                   {t('nav.about')}
                 </button>
                 <button
                   onClick={() => scrollToSection('contact')}
-                  className="w-1/2 mx-auto px-4 py-1.5 text-sm bg-[#c0576f] dark:bg-[#e48679] text-white dark:text-[#470d3b] rounded-lg hover:bg-[#7e2f56] dark:hover:bg-[#c0576f] transition-colors text-center"
+                  className="w-1/2 mx-auto px-4 py-1.5 text-sm bg-[#c0576f] dark:bg-[#e48679] text-white dark:text-[#470d3b] rounded-lg hover:bg-[#7e2f56] dark:hover:bg-[#c0576f] transition-colors text-center cursor-pointer"
                   aria-label="Contact section"
                 >
                   {t('nav.contact')}

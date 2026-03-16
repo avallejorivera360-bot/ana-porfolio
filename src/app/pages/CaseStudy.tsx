@@ -19,7 +19,7 @@ export function CaseStudy() {
       <div className="max-w-5xl mx-auto px-6 lg:px-8 py-8">
         <Link 
           to="/#projects"
-          className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-[#c0576f] dark:hover:text-[#febd84] transition-colors"
+          className="inline-flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-[#c0576f] dark:hover:text-[#febd84] transition-colors"
         >
           <ArrowLeft size={20} />
           {t('caseStudy.backButton')}
@@ -55,7 +55,7 @@ export function CaseStudy() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl tracking-tight mb-6 dark:text-white">
             {project.title}
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
+          <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
             {project.description}
           </p>
         </div>
@@ -65,7 +65,7 @@ export function CaseStudy() {
           <h2 className="text-3xl tracking-tight mb-6 dark:text-white">
             {t('caseStudy.overview')}
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+          <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
             {project.overview}
           </p>
         </section>
@@ -75,7 +75,7 @@ export function CaseStudy() {
           <h2 className="text-3xl tracking-tight mb-6 dark:text-white">
             {t('caseStudy.problem')}
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
+          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
             {project.problem}
           </p>
           {project.problemImages && project.problemImages.length > 0 && (
@@ -108,7 +108,7 @@ export function CaseStudy() {
                 <div className="flex-shrink-0 w-8 h-8 bg-[#c0576f] dark:bg-[#febd84] dark:text-[#470d3b] text-white rounded-lg flex items-center justify-center">
                   {index + 1}
                 </div>
-                <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed pt-1">
+                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed pt-1">
                   {goal}
                 </p>
               </li>
@@ -121,7 +121,7 @@ export function CaseStudy() {
           <h2 className="text-3xl tracking-tight mb-6 dark:text-white">
             {t('caseStudy.designProcess')}
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+          <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
             {project.designProcess}
           </p>
         </section>
@@ -131,7 +131,7 @@ export function CaseStudy() {
           <h2 className="text-3xl tracking-tight mb-6 dark:text-white">
             {t('caseStudy.development')}
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+          <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
             {project.development}
           </p>
         </section>
@@ -233,7 +233,7 @@ export function CaseStudy() {
         <section className="text-center pt-8 border-t border-gray-200">
           <Link 
             to="/#projects"
-            className="inline-flex items-center gap-2 px-8 py-4 w-1/2 mx-auto bg-[#c0576f] dark:bg-[#febd84] text-white dark:text-[#470d3b] rounded-lg hover:bg-[#7e2f56] dark:hover:bg-[#c0576f] transition-colors disabled:bg-green-500 dark:disabled:bg-green-600 disabled:cursor-not-allowed justify-center"
+            className="inline-flex items-center gap-2 px-8 py-4 w-1/2 mx-auto bg-[#c0576f] dark:bg-[#febd84] text-white dark:text-[#470d3b] rounded-lg hover:bg-[#7e2f56] dark:hover:bg-[#c0576f] transition-colors disabled:bg-green-500 dark:disabled:bg-green-600 disabled:cursor-not-allowed justify-center cursor-pointer"
           >
             {t('caseStudy.viewMoreProjects')}
             <ExternalLink size={20} />

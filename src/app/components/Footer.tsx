@@ -16,11 +16,11 @@ export function Footer() {
           transition={{ duration: 0.5 }}
           className="flex flex-col md:flex-row items-center justify-between gap-4"
         >
-          <div className="text-gray-600 dark:text-gray-400 text-sm">
+          <div className="text-gray-700 dark:text-gray-300 text-sm">
             © {currentYear} Ana Vallejo Rivera. {t('footer.allRightsReserved')}
           </div>
 
-          <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400 text-sm">
+          <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300 text-sm">
             {t('footer.designedBuilt')}
             <motion.div
               animate={{

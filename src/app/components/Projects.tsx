@@ -19,7 +19,7 @@ export function Projects() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl tracking-tight mb-4 text-[#470d3b] dark:text-[#E48679] text-center">
             {t('projects.section')}
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-center">
+          <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto text-center">
             {t('projects.description')}
           </p>
         </motion.div>

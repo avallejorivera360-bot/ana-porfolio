@@ -163,7 +163,7 @@ export function Skills() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl tracking-tight mb-4 text-[#470d3b] dark:text-[#e48679]">
             {t('skills.section')}
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
             {t('skills.description')}
           </p>
         </motion.div>

@@ -117,7 +117,7 @@ export function Contact() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl tracking-tight mb-4 text-[#470d3b] dark:text-[#e48679]">
             {t('contact.section')}
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-700 dark:text-gray-300">
             {t('contact.description')}
           </p>
         </motion.div>
@@ -151,7 +151,7 @@ export function Contact() {
                   <Mail size={24} />
                 </motion.div>
                 <div>
-                  <div className="text-sm text-gray-500 dark:text-gray-400">{t('contact.email')}</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">{t('contact.email')}</div>
                   <div className="group-hover:text-[#c0576f] transition-colors dark:text-[#e48679] dark:group-hover:text-[#e48679]">
                     avallejorivera360@gmail.com
                   </div>
@@ -176,7 +176,7 @@ export function Contact() {
                   <Linkedin size={24} />
                 </motion.div>
                 <div>
-                  <div className="text-sm text-gray-500 dark:text-gray-400">{t('contact.linkedin')}</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-300">{t('contact.linkedin')}</div>
                   <div className="group-hover:text-[#c0576f] transition-colors dark:text-[#e48679] dark:group-hover:text-[#e48679]">
                     linkedin.com/in/anavallejorivera-developer
                   </div>
@@ -192,7 +192,7 @@ export function Contact() {
               className="mt-8 p-6 bg-white dark:bg-gray-800 rounded-xl"
             >
               <h4 className="mb-4 dark:text-white">{t('contact.openOpportunities')}</h4>
-              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
                 {t('contact.openToWork')}
               </p>
             </motion.div>
@@ -287,7 +287,7 @@ export function Contact() {
                 disabled={loading || submitted}
                 whileHover={{ scale: (loading || submitted) ? 1 : 1.02 }}
                 whileTap={{ scale: (loading || submitted) ? 1 : 0.98 }}
-                className="w-1/2 mx-auto px-8 py-4 bg-[#c0576f] dark:bg-[#e48679] text-white dark:text-[#470d3b] rounded-lg hover:bg-[#7e2f56] dark:hover:bg-[#c0576f] transition-colors disabled:bg-green-500 dark:disabled:bg-green-600 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="w-1/2 mx-auto px-8 py-4 bg-[#c0576f] dark:bg-[#e48679] text-white dark:text-[#470d3b] rounded-lg hover:bg-[#7e2f56] dark:hover:bg-[#c0576f] transition-colors disabled:bg-green-500 dark:disabled:bg-green-600 disabled:cursor-not-allowed flex items-center justify-center gap-2 cursor-pointer"
               >
                 {submitted ? (
                   <>{t('contact.successMessage')}</>

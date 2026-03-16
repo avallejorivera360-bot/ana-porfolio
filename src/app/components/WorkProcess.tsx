@@ -45,7 +45,7 @@ export function WorkProcess() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl tracking-tight mb-4 text-[#470d3b] dark:text-[#e48679]">
             {t('workProcess.section')}
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
             {t('workProcess.description')}
           </p>
         </motion.div>
@@ -56,7 +56,7 @@ export function WorkProcess() {
             style={{ top: '3rem' }}
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4 auto-rows-fr">
             {processSteps.map((step, index) => {
               const Icon = step.icon;
               return (
@@ -79,9 +79,9 @@ export function WorkProcess() {
 
                   <motion.div
                     transition={{ duration: 0.3 }}
-                    className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-sm hover:shadow-xl  hover:bg-white dark:hover:bg-gray-700 dark:hover:shadow-2xl transition-all duration-300"
+                    className="flex flex-col h-full bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-sm hover:shadow-xl  hover:bg-white dark:hover:bg-gray-700 dark:hover:shadow-2xl transition-all duration-300"
                   >
-                    <div className="flex md:flex-col items-start md:items-center gap-4 md:gap-6">
+                    <div className="flex md:flex-col items-start md:items-center gap-4 md:gap-6 h-full">
                       <motion.div
                         whileHover={{ rotate: 360 }}
                         transition={{ duration: 0.6 }}
@@ -90,7 +90,7 @@ export function WorkProcess() {
                         <Icon size={24} />
                       </motion.div>
 
-                      <div className="md:text-center">
+                      <div className="flex flex-col md:text-center">
                         <h3 className="text-xl mb-2 tracking-tight text-[#e48679]">
                           {t(step.titleKey)}
                         </h3>

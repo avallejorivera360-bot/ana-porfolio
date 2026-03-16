@@ -49,7 +49,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="inline-block px-4 py-2 bg-gray-50 dark:bg-gray-900 rounded-full text-sm text-gray-600 dark:text-gray-400 mb-4"
+            className="inline-block px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-full text-sm text-gray-700 dark:text-gray-300 mb-4"
           >
             {t('hero.available')}
           </motion.div>
@@ -76,7 +76,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed"
           >
             {t('hero.description')}
           </motion.p>
@@ -113,7 +113,7 @@ export function Hero() {
               onClick={downloadCV}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="w-1/2 mx-auto px-8 py-4 bg-[#c0576f] dark:bg-[#e48679] text-white dark:text-[#470d3b] rounded-lg hover:bg-[#7e2f56] dark:hover:bg-[#c0576f] transition-colors inline-flex items-center justify-center gap-2"
+              className="w-1/2 mx-auto px-8 py-4 bg-[#c0576f] dark:bg-[#e48679] text-white dark:text-[#470d3b] rounded-lg hover:bg-[#7e2f56] dark:hover:bg-[#c0576f] transition-colors inline-flex items-center justify-center gap-2 cursor-pointer"
             >
               {t('hero.downloadCV')}
               <motion.div

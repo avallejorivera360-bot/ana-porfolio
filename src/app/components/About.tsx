@@ -37,7 +37,7 @@ export function About() {
           </h2>
         </motion.div>
 
-        <div className="space-y-6 text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+        <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -106,7 +106,7 @@ export function About() {
                 className="p-6 bg-gray-50 dark:bg-gray-800 rounded-xl hover:bg-white dark:hover:bg-gray-700 hover:shadow-lg dark:hover:shadow-2xl transition-all duration-300"
               >
                 <h4 className="mb-2 text-[#c0576f] dark:text-[#e48679]">{highlight.title}</h4>
-                <p className="text-gray-600 dark:text-gray-400">
+                <p className="text-gray-700 dark:text-gray-300">
                   {highlight.description}
                 </p>
               </motion.div>
