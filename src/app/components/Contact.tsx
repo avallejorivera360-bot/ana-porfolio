@@ -38,14 +38,6 @@ export function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // ✅ Logs de debug solo en desarrollo para facilitar troubleshooting
-    if (process.env.NODE_ENV === 'development') {
-      console.log('📝 Formulario enviado - Datos:', formData);
-      console.log('🔑 Public Key:', import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-      console.log('📧 Service ID:', import.meta.env.VITE_EMAILJS_SERVICE_ID);
-      console.log('📋 Template ID:', import.meta.env.VITE_EMAILJS_TEMPLATE_ID);
-    }
 
     // ✅ Rate limiting (evita spam)
     const now = Date.now();
@@ -57,9 +49,6 @@ export function Contact() {
     // ✅ Validación mejorada - ahora retorna keys de traducción
     const validationErrorKey = validateForm(formData);
     if (validationErrorKey) {
-      if (process.env.NODE_ENV === 'development') {
-        console.warn('❌ Validación fallida:', validationErrorKey);
-      }
       setError(t(validationErrorKey));
       return;
     }
@@ -68,11 +57,6 @@ export function Contact() {
     setError('');
 
     try {
-      if (process.env.NODE_ENV === 'development') {
-        console.log('⏳ Iniciando envío...');
-        console.log('Enviando formulario de contacto...');
-      }
-
       const response = await emailjs.send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
@@ -84,14 +68,7 @@ export function Contact() {
         }
       );
 
-      if (process.env.NODE_ENV === 'development') {
-        console.log('✅ Respuesta de EmailJS:', response);
-      }
-
       if (response.status === 200) {
-        if (process.env.NODE_ENV === 'development') {
-          console.log('🎉 Mensaje enviado exitosamente');
-        }
         setSubmitted(true);
         setFormData({ name: '', email: '', message: '' });
         setLastSubmitTime(now);
@@ -100,15 +77,9 @@ export function Contact() {
           setSubmitted(false);
         }, 3000);
       } else {
-        if (process.env.NODE_ENV === 'development') {
-          console.warn('⚠️ Respuesta inesperada:', response.status);
-        }
         setError(`Error: No se pudo enviar el mensaje (${response.status})`);
       }
     } catch (err: any) {
-      if (process.env.NODE_ENV === 'development') {
-        console.error('🚨 Error de envío:', err);
-      }
       const errorMessage = err?.text || err?.message || 'Error al enviar el mensaje';
       setError(`Error: ${errorMessage}`);
       
