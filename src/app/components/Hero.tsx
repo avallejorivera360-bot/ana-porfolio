@@ -94,9 +94,10 @@ export function Hero() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1, y: -5 }}
               whileTap={{ scale: 0.95 }}
+              aria-label="Visita mi perfil en LinkedIn (abre en nueva ventana)"
               className="p-3 bg-gray-100 dark:bg-gray-800 rounded-full text-[#c0576f] dark:text-[#e48679] hover:bg-[#c0576f] hover:text-white dark:hover:bg-[#e48679] dark:hover:text-gray-900 transition-all"
             >
-              <Linkedin size={24} />
+              <Linkedin size={24} aria-hidden="true" />
             </motion.a>
             <motion.a
               href="https://github.com/anavallejorivera"
@@ -104,9 +105,10 @@ export function Hero() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1, y: -5 }}
               whileTap={{ scale: 0.95 }}
+              aria-label="Visita mi perfil en GitHub (abre en nueva ventana)"
               className="p-3 bg-gray-100 dark:bg-gray-800 rounded-full text-[#c0576f] dark:text-[#e48679] hover:bg-[#c0576f] hover:text-white dark:hover:bg-[#e48679] dark:hover:text-gray-900 transition-all"
             >
-              <Github size={24} />
+              <Github size={24} aria-hidden="true" />
             </motion.a>
           </motion.div>
           

@@ -213,7 +213,7 @@ export function Contact() {
                 transition={{ duration: 0.4, delay: 0.1 }}
               >
                 <label htmlFor="name" className="block text-sm mb-2 text-gray-700 dark:text-gray-300">
-                  {t('contact.nameLabel')}
+                  {t('contact.nameLabel')} <span className="text-[#c0576f]">*</span>
                 </label>
                 <input
                   type="text"
@@ -222,8 +222,10 @@ export function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
+                  aria-required="true"
+                  aria-invalid={error && formData.name.trim().length < 2 ? 'true' : 'false'}
                   className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c0576f] dark:focus:ring-[#febd84] focus:border-transparent dark:text-white dark:placeholder-gray-500 transition-all"
-                    placeholder={t('contact.namePlaceholder')}
+                  placeholder={t('contact.namePlaceholder')}
                 />
               </motion.div>
 
@@ -234,7 +236,7 @@ export function Contact() {
                 transition={{ duration: 0.4, delay: 0.2 }}
               >
                 <label htmlFor="email" className="block text-sm mb-2 text-gray-700 dark:text-gray-300">
-                  {t('contact.emailLabel')}
+                  {t('contact.emailLabel')} <span className="text-[#c0576f]">*</span>
                 </label>
                 <input
                   type="email"
@@ -243,8 +245,10 @@ export function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
+                  aria-required="true"
+                  aria-invalid={error && !formData.email.includes('@') ? 'true' : 'false'}
                   className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c0576f] dark:focus:ring-[#febd84] focus:border-transparent dark:text-white dark:placeholder-gray-500 transition-all"
-                    placeholder={t('contact.emailPlaceholder')}
+                  placeholder={t('contact.emailPlaceholder')}
                 />
               </motion.div>
 
@@ -255,7 +259,7 @@ export function Contact() {
                 transition={{ duration: 0.4, delay: 0.3 }}
               >
                 <label htmlFor="message" className="block text-sm mb-2 text-gray-700 dark:text-gray-300">
-                  {t('contact.messageLabel')}
+                  {t('contact.messageLabel')} <span className="text-[#c0576f]">*</span>
                 </label>
                 <textarea
                   id="message"
@@ -263,9 +267,11 @@ export function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   required
+                  aria-required="true"
+                  aria-invalid={error && formData.message.trim().length < 10 ? 'true' : 'false'}
                   rows={6}
                   className="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c0576f] dark:focus:ring-[#febd84] focus:border-transparent dark:text-white dark:placeholder-gray-500 transition-all resize-none"
-                    placeholder={t('contact.messagePlaceholder')}
+                  placeholder={t('contact.messagePlaceholder')}
                 />
               </motion.div>
 
@@ -273,6 +279,8 @@ export function Contact() {
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
+                  role="alert"
+                  aria-live="polite"
                   className="p-4 bg-white dark:bg-white text-[#c0576f] dark:text-[#c0576f] rounded-lg text-sm border border-[#c0576f] dark:border-[#c0576f]"
                 >
                   {error}
@@ -284,19 +292,21 @@ export function Contact() {
                 disabled={loading || submitted}
                 whileHover={{ scale: (loading || submitted) ? 1 : 1.02 }}
                 whileTap={{ scale: (loading || submitted) ? 1 : 0.98 }}
+                aria-label={loading ? t('contact.sending') : t('contact.sendButton')}
+                aria-busy={loading}
                 className="w-1/2 mx-auto px-8 py-4 bg-[#c0576f] dark:bg-[#e48679] text-white dark:text-[#470d3b] rounded-lg hover:bg-[#7e2f56] dark:hover:bg-[#c0576f] transition-colors disabled:bg-green-500 dark:disabled:bg-green-600 disabled:cursor-not-allowed flex items-center justify-center gap-2 cursor-pointer"
               >
                 {submitted ? (
                   <>{t('contact.successMessage')}</>
                 ) : loading ? (
                   <>
-                    <div className="animate-spin h-5 w-5 border-2 border-white border-t-transparent rounded-full"></div>
+                    <div className="animate-spin h-5 w-5 border-2 border-white border-t-transparent rounded-full" aria-hidden="true"></div>
                     {t('contact.sending')}
                   </>
                 ) : (
                   <>
                     {t('contact.sendButton')}
-                    <Send size={18} />
+                    <Send size={18} aria-hidden="true" />
                   </>
                 )}
               </motion.button>
