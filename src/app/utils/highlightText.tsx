@@ -9,9 +9,9 @@ interface HighlightConfig {
  * Colores del proyecto para resaltar, rotando entre ellos
  */
 const highlightColors = [
-  'bg-[#c0576f] dark:bg-[#e48679] text-white dark:text-[#470d3b]',
-  'bg-[#febd84] text-[#470d3b]',
-  'bg-[#e48679] dark:bg-[#c0576f] text-white dark:text-white',
+  'text-[#c0576f] dark:text-[#febd84] font-semibold',
+  'text-[#febd84] dark:text-[#c0576f] font-semibold',
+  'text-[#e48679] dark:text-[#e48679] font-semibold',
 ];
 
 /**
@@ -37,7 +37,7 @@ export function highlightText({ text, highlightTerms }: HighlightConfig): React.
       const color = highlightColors[colorIndex % highlightColors.length];
       colorIndex++;
       return (
-        <span key={index} className={`${color} font-semibold px-1 rounded`}>
+        <span key={index} className={color}>
           {part}
         </span>
       );
