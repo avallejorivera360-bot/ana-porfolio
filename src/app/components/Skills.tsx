@@ -18,11 +18,12 @@ const skillsData = [
   { name: 'MySQL', level: 60, category: 'backend' },
   
   // Diseño & Herramientas
+  { name: 'IA Generativa', level: 80, category: 'design' },
   { name: 'Figma', level: 60, category: 'design' },
   { name: 'UI Design', level: 78, category: 'design' },
-  { name: 'GitHub', level: 65, category: 'tools' },
-  { name: 'Elementor', level: 62, category: 'tools' },
-  { name: 'WooCommerce', level: 80, category: 'tools' },
+  { name: 'GitHub', level: 65, category: 'design' },
+  { name: 'Elementor', level: 62, category: 'design' },
+  { name: 'WooCommerce', level: 80, category: 'design' },
 ];
 
 interface CircularProgressProps {
