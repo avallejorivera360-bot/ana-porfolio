@@ -1,6 +1,7 @@
 import { useParams, Link, Navigate } from 'react-router';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { useCallback } from 'react';
 import { projects } from '../data/projects';
 import { Footer } from '../components/Footer';
 
@@ -8,6 +9,13 @@ export function CaseStudy() {
   const { projectId } = useParams();
   const { t } = useTranslation();
   const project = projects.find(p => p.id === projectId);
+
+  const scrollToProjects = useCallback(() => {
+    const element = document.getElementById('projects');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
 
   if (!project) {
     return <Navigate to="/" replace />;
@@ -17,13 +25,13 @@ export function CaseStudy() {
     <div className="bg-white dark:bg-gray-900 pt-20">
       {/* Back Button */}
       <div className="max-w-5xl mx-auto px-6 lg:px-8 py-8">
-        <Link 
-          to="/#projects"
+        <button 
+          onClick={scrollToProjects}
           className="inline-flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-[#c0576f] dark:hover:text-[#febd84] transition-colors"
         >
           <ArrowLeft size={20} />
           {t('caseStudy.backButton')}
-        </Link>
+        </button>
       </div>
 
       {/* Hero Image */}
@@ -231,13 +239,13 @@ export function CaseStudy() {
 
         {/* Next Project CTA */}
         <section className="text-center pt-8 border-t border-gray-200">
-          <Link 
-            to="/#projects"
+          <button 
+            onClick={scrollToProjects}
             className="inline-flex items-center gap-2 px-8 py-4 w-1/2 mx-auto bg-[#c0576f] dark:bg-[#febd84] text-white dark:text-[#470d3b] rounded-lg hover:bg-[#7e2f56] dark:hover:bg-[#c0576f] transition-colors disabled:bg-green-500 dark:disabled:bg-green-600 disabled:cursor-not-allowed justify-center cursor-pointer"
           >
             {t('caseStudy.viewMoreProjects')}
             <ExternalLink size={20} />
-          </Link>
+          </button>
         </section>
       </div>
 
