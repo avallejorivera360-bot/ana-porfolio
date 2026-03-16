@@ -7,7 +7,7 @@ import { projects } from '../data/projects';
 export function Projects() {
   const { t } = useTranslation();
   return (
-    <section id="projects" className="py-32 px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+    <section id="projects" className="py-32 px-6 lg:px-8 bg-gray-100 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
