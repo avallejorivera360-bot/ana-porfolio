@@ -1,24 +1,37 @@
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
+import { highlightText } from '../utils/highlightText';
 
 export function About() {
   const { t } = useTranslation();
+  
+  // Palabras clave a resaltar en cada párrafo
+  const bioHighlights = ['diseñadora y desarrolladora web autodidacta'];
+  const techHighlights = ['HTML, CSS y JavaScript', 'WordPress y comercio electrónico', 'Desarrollo de Aplicaciones Web (DAW)', 'DAW'];
+  const interestHighlights = ['interfaces claras, funcionales y fáciles de usar'];
+  const approachHighlights = ['diseño y desarrollo'];
+  const learningHighlights = ['desarrollando proyectos'];
+  
   const highlights = [
     {
       title: t('about.usability'),
-      description: t('about.usabilityDesc')
+      description: t('about.usabilityDesc'),
+      highlightTerms: ['interfaces claras', 'fáciles de usar']
     },
     {
       title: t('about.code'),
-      description: t('about.codeDesc')
+      description: t('about.codeDesc'),
+      highlightTerms: ['código limpio', 'buenas prácticas']
     },
     {
       title: t('about.problem'),
-      description: t('about.problemDesc')
+      description: t('about.problemDesc'),
+      highlightTerms: ['problema técnico', 'diferentes soluciones']
     },
     {
       title: t('about.continuous'),
-      description: t('about.continuousDesc')
+      description: t('about.continuousDesc'),
+      highlightTerms: ['nuevas herramientas', 'nuevas tecnologías']
     }
   ];
 
@@ -44,7 +57,7 @@ export function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            {t('about.bio')}
+            {highlightText({ text: t('about.bio'), highlightTerms: bioHighlights })}
           </motion.p>
 
           <motion.p
@@ -53,7 +66,7 @@ export function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            {t('about.technologies')}
+            {highlightText({ text: t('about.technologies'), highlightTerms: techHighlights })}
           </motion.p>
 
           <motion.p
@@ -62,7 +75,7 @@ export function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            {t('about.interests')}
+            {highlightText({ text: t('about.interests'), highlightTerms: interestHighlights })}
           </motion.p>
 
           <motion.p
@@ -71,7 +84,7 @@ export function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            {t('about.approach')}
+            {highlightText({ text: t('about.approach'), highlightTerms: approachHighlights })}
           </motion.p>
 
           <motion.p
@@ -80,7 +93,7 @@ export function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            {t('about.learning')}
+            {highlightText({ text: t('about.learning'), highlightTerms: learningHighlights })}
           </motion.p>
         </div>
 
@@ -107,7 +120,7 @@ export function About() {
               >
                 <h4 className="mb-2 text-[#c0576f] dark:text-[#e48679]">{highlight.title}</h4>
                 <p className="text-gray-700 dark:text-gray-300">
-                  {highlight.description}
+                  {highlightText({ text: highlight.description, highlightTerms: highlight.highlightTerms })}
                 </p>
               </motion.div>
             ))}
