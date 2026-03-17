@@ -13,18 +13,21 @@ export function Navigation() {
   const { t } = useTranslation();
 
   const scrollToSection = useCallback((sectionId: string) => {
-    if (location.pathname === '/') {
+    setIsOpen(false);
+    
+    if (location.pathname === '/' || location.pathname === '') {
       // Si estamos en home -> scroll directo
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 0);
     } else {
       // Si estamos en otra página, navegar a home con hash
       window.location.href = `/#${sectionId}`;
     }
-    setIsOpen(false);
-  }, [location.pathname]); //useCallback para evitar recreación innecesaria
+  }, [location.pathname]);
 
   // Handle hash-based navigation on page load using requestAnimationFrame
   useEffect(() => {
@@ -151,6 +154,7 @@ export function Navigation() {
             >
               <div className="flex flex-col gap-4">
                 <button 
+                  type="button"
                   onClick={() => scrollToSection('projects')} 
                   className="text-left py-2 font-normal whitespace-nowrap hover:text-[#c0576f] dark:hover:text-[#e48679] transition-colors dark:text-gray-300 cursor-pointer"
                   aria-label="Projects section"
@@ -158,6 +162,7 @@ export function Navigation() {
                   {t('nav.projects')}
                 </button>
                 <button 
+                  type="button"
                   onClick={() => scrollToSection('skills')} 
                   className="text-left py-2 font-normal whitespace-nowrap hover:text-[#c0576f] dark:hover:text-[#e48679] transition-colors dark:text-gray-300 cursor-pointer"
                   aria-label="Skills section"
@@ -165,6 +170,7 @@ export function Navigation() {
                   {t('nav.skills')}
                 </button>
                 <button 
+                  type="button"
                   onClick={() => scrollToSection('about')} 
                   className="text-left py-2 font-normal whitespace-nowrap hover:text-[#c0576f] dark:hover:text-[#e48679] transition-colors dark:text-gray-300 cursor-pointer"
                   aria-label="About section"
@@ -172,6 +178,7 @@ export function Navigation() {
                   {t('nav.about')}
                 </button>
                 <button
+                  type="button"
                   onClick={() => scrollToSection('contact')}
                   className="w-1/2 mx-auto px-4 py-1.5 text-sm bg-[#c0576f] dark:bg-[#e48679] text-white dark:text-[#470d3b] rounded-lg hover:bg-[#7e2f56] dark:hover:bg-[#c0576f] transition-colors text-center cursor-pointer"
                   aria-label="Contact section"

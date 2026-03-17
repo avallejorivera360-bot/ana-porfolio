@@ -9,16 +9,23 @@ export function Layout() {
   const isInitialMount = useRef(true);
 
   useEffect(() => {
-    // Ignorar el primer render para permitir que la página cargue desde el Hero
     if (isInitialMount.current) {
       isInitialMount.current = false;
-      // Limpiar el hash de la URL al cargar la página para evitar scroll automático
-      if (location.hash) {
+      
+      // Si es la primera visita en esta sesión y hay hash, limpiar para empezar en Hero
+      const hasVisited = sessionStorage.getItem('visited_ana_portfolio');
+      if (!hasVisited && location.hash) {
+        sessionStorage.setItem('visited_ana_portfolio', 'true');
         window.history.replaceState({}, '', window.location.pathname);
+        return;
       }
+      
+      // Marcar como visitado para futuras navegaciones
+      sessionStorage.setItem('visited_ana_portfolio', 'true');
       return;
     }
 
+    // Hacer scroll a la sección cuando el hash cambia después del initial mount
     if (location.hash) {
       const element = document.getElementById(location.hash.slice(1));
       if (element) {

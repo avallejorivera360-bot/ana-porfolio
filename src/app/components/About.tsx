@@ -3,35 +3,59 @@ import { useTranslation } from 'react-i18next';
 import { highlightText } from '../utils/highlightText';
 
 export function About() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   
-  // Palabras clave a resaltar en cada párrafo
-  const bioHighlights = ['diseñadora y desarrolladora web autodidacta'];
-  const techHighlights = ['HTML, CSS y JavaScript', 'WordPress y comercio electrónico', 'Desarrollo de Aplicaciones Web (DAW)', 'DAW'];
-  const interestHighlights = ['interfaces claras, funcionales y fáciles de usar'];
-  const approachHighlights = ['diseño y desarrollo'];
-  const learningHighlights = ['desarrollando proyectos'];
+  // Palabras clave a resaltar en cada párrafo - según idioma
+  const isSpanish = i18n.language.startsWith('es');
+  
+  const bioHighlights = isSpanish 
+    ? ['diseñadora y desarrolladora web autodidacta']
+    : ['self-taught web designer and developer'];
+  
+  const techHighlights = isSpanish 
+    ? ['HTML, CSS y JavaScript', 'WordPress y comercio electrónico', 'Desarrollo de Aplicaciones Web (DAW)', 'DAW']
+    : ['HTML, CSS, and JavaScript', 'WordPress and e-commerce', 'Web Application Development (DAW)', 'DAW'];
+  
+  const interestHighlights = isSpanish 
+    ? ['interfaces claras, funcionales y fáciles de usar']
+    : ['clear, functional, and easy-to-use interfaces'];
+  
+  const approachHighlights = isSpanish 
+    ? ['diseño y desarrollo']
+    : ['design and development'];
+  
+  const learningHighlights = isSpanish 
+    ? ['desarrollando proyectos']
+    : ['develop projects'];
   
   const highlights = [
     {
       title: t('about.usability'),
       description: t('about.usabilityDesc'),
-      highlightTerms: ['interfaces claras', 'fáciles de usar']
+      highlightTerms: isSpanish 
+        ? ['interfaces claras', 'fáciles de usar']
+        : ['clear', 'easy-to-use interfaces']
     },
     {
       title: t('about.code'),
       description: t('about.codeDesc'),
-      highlightTerms: ['código limpio', 'buenas prácticas']
+      highlightTerms: isSpanish 
+        ? ['código limpio', 'buenas prácticas']
+        : ['clean', 'best practices']
     },
     {
       title: t('about.problem'),
       description: t('about.problemDesc'),
-      highlightTerms: ['problema técnico', 'diferentes soluciones']
+      highlightTerms: isSpanish 
+        ? ['problema técnico', 'diferentes soluciones']
+        : ['technical problem', 'different solutions']
     },
     {
       title: t('about.continuous'),
       description: t('about.continuousDesc'),
-      highlightTerms: ['nuevas herramientas', 'nuevas tecnologías']
+      highlightTerms: isSpanish 
+        ? ['nuevas herramientas', 'nuevas tecnologías']
+        : ['new tools', 'new technologies']
     }
   ];
 

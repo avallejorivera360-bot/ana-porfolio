@@ -118,7 +118,9 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.8 }}
             className="pt-8 flex flex-col sm:flex-row gap-4 justify-center"
           >
-            {/* <motion.button
+            {/* BOTON VER PROYECTOS
+            
+            <motion.button
               onClick={scrollToProjects}
               whileHover={{ 
                 scale: 1.05,
